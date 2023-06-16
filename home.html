@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            /* Remove default margin */
+            height: 100vh;
+            /* Set height to fill viewport */
+            background-color: #081b29;
+        }
+
+        .a {
+            background-color: #081b29;
+            /* Updated background color */
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-family: 'Balsamiq Sans', cursive;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .Link {
+            margin-right: 10px;
+        }
+
+        .Link:first-child {
+            margin-right: 300px;
+        }
+
+        .Link p {
+            font-size: 24px;
+            margin: 0;
+            margin-left: 80px;
+            font-weight: 500;
+        }
+
+        .Link:last-child {
+            margin-right: 40px;
+        }
+
+        .Link a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Balsamiq Sans', cursive;
+            font-size: large;
+            font-weight: 500;
+            transition: color 1s;
+        }
+
+        .Link a:hover {
+            color: #539df8;
+        }
+
+        .c1 {
+            font-size: 40px;
+            font-weight: bolder;
+            /* background: #081b29; */
+            background-repeat: repeat;
+            margin-top: 212px;
+            /* margin: 0; */
+            margin-left: 100px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .z {
+            color: #539df8;
+            font-weight: bolder;
+            font-size: 31px;
+            margin-left: 100px;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: -20px;
+        }
+
+        .para {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 100px;
+            margin-right: 570px;
+            line-height: 22px;
+        }
+
+        .img {
+            margin-left: 935px;
+            margin-top: -450px;
+        }
+
+        .hire-button {
+            display: inline-block;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .hire-button a {
+            display: inline-block;
+            color: #306bce;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #306bce;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            margin-right: 20px;
+            overflow: hidden;
+            z-index: 1;
+            font-weight: 800;
+            font-size: large;
+        }
+
+        .hire-button a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #306bce;
+            transition: width 1s, color 1s;
+            z-index: -1;
+        }
+
+        .hire-button a:hover::before {
+            width: 100%;
+        }
+
+        .hire-button a:hover {
+            color: #081b29;
+        }
+
+        /* Facebook logo */
+        .fb-logo {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .fb-logo a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #081b29;
+            transition: background-color 1s, color 1s;
+            position: relative;
+            border: 2px solid #306bce;
+            margin-left: -1115px;
+            margin-top: 50px;
+        }
+
+        .fb-logo a::before {
+            content: 'f';
+            font-family: 'Balsamiq Sans', cursive;
+            font-size: 26px;
+            font-weight: bold;
+            color: #306bce;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: color 1s;
+        }
+
+        .fb-logo a:hover {
+            background-color: #306bce;
+            border-color: #306bce;
+        }
+
+        .fb-logo a:hover::before {
+            color: #081b29;
+        }
+
+        .instagram-logo,
+        .linkedin-logo {
+            display: inline-block;
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 60px;
+        }
+
+        .instagram-logo a,
+        .linkedin-logo a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #081b29;
+            transition: background-color 1s, color 1s;
+            position: absolute;
+            border: 2px solid #306bce;
+            margin-top: -61px;
+            margin-left: 100px;
+        }
+
+        .instagram-logo a i,
+        .linkedin-logo a i {
+            color: #306bce;
+            font-size: 26px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: color 1s;
+        }
+
+        .instagram-logo a:hover,
+        .linkedin-logo a:hover {
+            background-color: #306bce;
+            border-color: #306bce;
+        }
+
+        .instagram-logo a:hover i,
+        .linkedin-logo a:hover i {
+            color: #081b29;
+        }
+
+        .about {
+            background-color: #112e42;
+            /* Updated background color */
+            height: 197vh;
+            /* Set height to fill viewport */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            /* Add padding to move content below the header */
+
+        }
+
+        .aboutt {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: -424px;
+            font-size: 24px;
+            font-weight: 1000;
+        }
+
+        .divider {
+            width: 37px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #539df8;
+            display: inline-block;
+            margin-top: -5px;
+        }
+
+        .para2 {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 285px;
+            margin-left: 285px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .know-me {
+            color: #539df8;
+            margin-left: -575px;
+            margin-top: 55px;
+            align-items: start;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+        }
+
+        .para3 {
+            color: #ffffff;
+            margin-left: 100px;
+            margin-right: 710px;
+            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        .skill {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+            margin-right: 45px;
+            margin-left: 143px;
+            margin-top: -590px;
+        }
+
+        .skill2 {
+            /* margin-top: -592px; */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+            color: #539df8;
+            margin-right: 38px;
+            margin-left: 253px;
+            margin-top: -590px;
+        }
+
+        .box {
+            width: 608px;
+            height: 428px;
+            /* color: #539df8; */
+            border: 5000px solid #539df8;
+            border-width: 2.5px;
+            margin-right: 1px;
+            margin-top: -525px;
+            margin-left: 669px;
+            border-radius: 8px;
+        }
+
+        .box2 {
+            margin-left: 30px;
+            width: 540px;
+            height: 13px;
+            border: 5000px solid #539df8;
+            border-width: 2.5px;
+            border-radius: 6px;
+        }
+
+        /* .line{
+            width: 470px;
+            height: 3px;
+            margin-top: 3.3px;
+            margin-left: 2px;
+            border: 5px solid #539df8;
+            border-width: 2.5px;
+            border-radius: 3px;
+            background-color: #539df8;
+
+        } */
+
+
+        
+        .line1 {
+            width: 0;
+            height: 6.70px;
+            margin-top: 3.3px;
+            margin-left: 2px;
+            background-color: #539df8;
+            border-radius: 3px;
+            animation: animateLine1 1s linear forwards;
+        }
+
+        @keyframes animateLine1 {
+            0% {
+                width: 50px;
+            }
+
+            100% {
+                width: 470px;
+            }
+        }
+
+        .line2 {
+            width: 0;
+            height: 6.70px;
+            margin-top: 3.3px;
+            margin-left: 2px;
+            background-color: #539df8;
+            border-radius: 3px;
+            animation: animateLine2 1s linear forwards;
+        }
+
+        @keyframes animateLine2 {
+            0% {
+                width: 80px;
+            }
+
+            100% {
+                width: 340px;
+            }
+        }
+
+        .line3 {
+            width: 0;
+            height: 6.70px;
+            margin-top: 3.3px;
+            margin-left: 2px;
+            background-color: #539df8;
+            border-radius: 3px;
+            animation: animateLine3 1s linear forwards;
+        }
+
+        @keyframes animateLine3 {
+            0% {
+                width: 120px;
+            }
+
+            100% {
+                width: 225px;
+            }
+        }
+
+        .line4 {
+            width: 0;
+            height: 6.70px;
+            margin-top: 3.3px;
+            margin-left: 2px;
+            background-color: #539df8;
+            border-radius: 3px;
+            animation: animateLine4 1s linear forwards;
+        }
+
+        @keyframes animateLine4 {
+            0% {
+                width: 150px;
+            }
+
+            100% {
+                width: 500px;
+            }
+        }
+
+
+        .box-content {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            padding-left: 30px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="a" id="header">
+        <div class="Link" style="font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Montserrat', sans-serif;">
+            <p>Abdullah.</p>
+        </div>
+        <div class="Link">
+            <a href="home.html">Home</a>
+        </div>
+        <div class="Link">
+            <a href="#about-section">About</a>
+        </div>
+
+        <div class="Link">
+            <a href="Services.html">Education</a>
+        </div>
+        <div class="Link">
+            <a href="Portfolio.html">Portfolio</a>
+        </div>
+        <div class="Link">
+            <a href="Contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div>
+        <p class="c1">
+            Hi, I'm Abdullah Maqsood
+        </p>
+        <p class="z">
+            Frontend Developer
+        </p>
+        <p class="para">
+            As a frontend developer, I specialize in crafting the user-facing aspects of websites, employing HTML,
+            CSS, and JavaScript to create visually appealing interfaces and seamless interactions. With a keen eye
+            for
+            design and a focus on user experience, I bring ideas to life by translating them into elegant and
+            functional web applications.
+        </p>
+        <div class="hire-button">
+            <a href="hireme.html">Hire me</a>
+            <a href="talkme.html">Talk me</a>
+        </div>
+        <!-- Facebook logo -->
+        <div class="fb-logo">
+            <a href="https://www.facebook.com/abdullah.abdullahmaqsood.16?mibextid=ZbWKwL"><span
+                    class="fb-text"></span></a>
+        </div>
+        <!-- Instagram icon -->
+        <div class="instagram-logo">
+            <a href="https://instagram.com/abdullah_maqsood_79?igshid=MzNlNGNkZWQ4Mg==">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- LinkedIn icon -->
+        <div class="linkedin-logo">
+            <a href="https://www.linkedin.com">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+
+        <p class="img">
+            <img src="bbb.png" alt="Image">
+        </p>
+    </div>
+
+    <section id="about-section" class="about">
+        <div class="aboutt">
+            <h2>About Me</h2>
+        </div>
+        <span class="divider"></span>
+        <p class="para2">
+            Here you will find more information about me, what I do, and my current skills mostly in terms of
+            programming and technology
+        </p>
+        <div>
+            <h3 class="know-me">
+                Get to know me!
+            </h3>
+        </div>
+        <p class="para3">
+            I'm an aspiring <b>Frontend Web Developer</b> dedicated to building the Front-end of Websites and Web
+            Applications,
+            with a strong drive to contribute to the success of the overall product. Take a moment to explore some of
+            the projects I've undertaken in the <b>Portfolio section.</b> <br><br>
+
+            In addition, I take pleasure in sharing valuable insights and knowledge I've gained during my journey in<b>
+                Web
+                Development</b>, aiming to support fellow members of the Dev Community. Feel free to connect with me on
+            LinkedIn, where I post informative content related to Web Development and Programming. <br><br>
+
+            I'm actively seeking <b>Internship opportunities</b> that offer a platform for me to learn, grow, and make a
+            positive
+            impact. If you have a promising opportunity that aligns with my skills and passion, please don't hesitate to
+            <b>get in touch</b> with me.
+        </p>
+        <div class="hire-button" style="margin-left: -1014px;">
+            <a href="contactme.html">Contact</a>
+        </div>
+        <div>
+            <h2 class="skill">
+                My
+            </h2>
+        </div>
+        <div>
+            <h2 class="skill2">
+                Skills
+            </h2>
+        </div>
+        <div class="box">
+            <p class="box-content">
+                Html &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 90%
+            </p>
+            <div class="box2" style="margin-top: -5px">
+                <div class="line1"></div>
+            </div>
+
+            <p class="box-content" style="margin-top: 50px">
+                Css &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 70%
+            </p>
+            <div class="box2" style="margin-top: -5px">
+                <div class="line2" style="width: 340px;"></div>
+            </div>
+
+            <p class="box-content" style="margin-top: 50px">
+                JavaScript &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp 40%
+            </p>
+            <div class="box2" style="margin-top: -5px">
+                <div class="line3" style="width: 225px;"></div>
+            </div>
+
+            <p class="box-content" style="margin-top: 50px">
+                C++ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 97%
+            </p>
+            <div class="box2" style="margin-top: -5px">
+                <div class="line4" style="width: 500px;"></div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+</body>
+
+</html>
